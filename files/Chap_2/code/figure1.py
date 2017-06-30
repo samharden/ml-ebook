@@ -17,5 +17,5 @@ for i,(p0,p1) in enumerate(pairs):
     plt.ylabel(feature_names[p1])
     plt.xticks([])
     plt.yticks([])
-plt.savefig('../1400_02_01.png')
-
+# plt.savefig('../1400_02_01.png')
+plt.show()

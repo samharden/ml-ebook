@@ -67,7 +67,7 @@ plot_models(
     x, y, [f1, f2, f3, f10, f100], os.path.join("..", "1400_01_04.png"))
 
 # fit and plot a model using the knowledge about inflection point
-inflection = 3.5 * 7 * 24
+inflection = int(3.5 * 7 * 24)
 xa = x[:inflection]
 ya = y[:inflection]
 xb = x[inflection:]

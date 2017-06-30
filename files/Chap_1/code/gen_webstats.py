@@ -60,11 +60,21 @@ f3 = sp.poly1d(f3p)
 f10 = sp.poly1d(f10p)
 f100 = sp.poly1d(f100p)
 
+inflection = int(3.5*7*24)
+xa = x[:inflection]
+ya = y[:inflection]
+xb = x[inflection:]
+yb = y[inflection:]
 
 my_list = [f1, f2, f3, f10, f100]
 
 fx = sp.linspace(0,x[-1], 1000)
 
+fa = sp.poly1d(sp.polyfit(xa, ya, 1))
+fb = sp.poly1d(sp.polyfit(xb, yb, 1))
+
+plt.plot(fa, linewidth=4)
+plt.plot(fb, linewidth=4)
 for plot_line in my_list:
     plt.plot(fx, plot_line(fx), linewidth=4)
 
